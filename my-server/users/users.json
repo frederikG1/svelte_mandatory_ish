@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Frederik",
+    "email": "fred@gmail.dk",
+    "password": "$2b$10$AtiY4.mvIyHPPfXrYjPzFuOtWVg3I5GeandE7q7CuQkoC0G2lmfgi"
+  },
+  {
+    "name": "Frederik",
+    "email": "fred@gmail.dk",
+    "password": "$2b$10$lf4O9soGGZPaUzHcq02YneczUI1GMFf70gTYwkxZPfU7veKgZD2Eu"
+  },
+  {
+    "name": "bob",
+    "email": "fred@gmail.com",
+    "password": "$2b$10$Z2MKX1riE.ncXlkbRw1BrOyQpX8RiVqL67aoNXaefmOgdH.v.RRfe"
+  },
+  {
+    "name": "bob",
+    "email": "123@gmail.dk",
+    "password": "$2b$10$IAdH7l0Xqzj5hH2El0zkLu.R2KpS2fKYfaU9lzH52kKypXvE7qpGG"
+  }
+]
