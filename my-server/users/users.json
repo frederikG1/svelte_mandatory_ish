@@ -18,5 +18,25 @@
     "name": "bob",
     "email": "123@gmail.dk",
     "password": "$2b$10$IAdH7l0Xqzj5hH2El0zkLu.R2KpS2fKYfaU9lzH52kKypXvE7qpGG"
+  },
+  {
+    "name": "frede",
+    "email": "hej",
+    "password": "$2b$10$fOrOUKQgw0dmz4oRqVNlAe5oCAdHSgitLgUX0Lnib/uXG/p7u5ah."
+  },
+  {
+    "name": "Frederik",
+    "email": "fred@gmail.com",
+    "password": "$2b$10$AvDGluojYR3XD7x7j4YnfuDUoWq8TXGWtAUzm.mtuerLAdFo1.yty"
+  },
+  {
+    "name": "Frederik",
+    "email": "hej@gmail.com",
+    "password": "$2b$10$9xaqAIPhiehTHi/RYxY.X./UqL7MfSn3.J.NrrckSVLu0uw8yjII6"
+  },
+  {
+    "name": "hej",
+    "email": "123@mail.com",
+    "password": "$2b$10$nEsFmr0PoYAbjz9vzX9lQukcdOh93pOr4bEr139CYkkTHlxNm9Ce."
   }
 ]
