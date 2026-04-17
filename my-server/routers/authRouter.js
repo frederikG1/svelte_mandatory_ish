@@ -20,7 +20,9 @@ router.post("/signup", async (req, res) => {
   // const users = JSON.parse(fs.readFileSync("users/users.json", "utf-8"));
   // const existingUser = users.find((user) => user.email === email);
 
-  const existingUser = await db.get("SELECT * FROM users WHERE email = ?", [email]);
+  const existingUser = db
+    .prepare("SELECT * FROM users WHERE email = ?")
+    .get(email);
 
   if (existingUser) {
     return res.status(400).send({ errorMessage: "Email already in use" });
@@ -31,7 +33,11 @@ router.post("/signup", async (req, res) => {
   // users.push(newUser);
   // fs.writeFileSync("users/users.json", JSON.stringify(users, null, 2));
 
-  await db.run("INSERT INTO users (name, email, password) VALUES (?, ?, ?)", [name, email, hashedPassword]);
+  db.prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)").run(
+    name,
+    email,
+    hashedPassword,
+  );
 
   // try {
   //   await sendMail({
@@ -58,7 +64,9 @@ router.post("/login", async (req, res) => {
   // const users = JSON.parse(fs.readFileSync("users/users.json", "utf-8"));
   // const foundUser = users.find((user) => user.email === email);
 
-  const foundUser = await db.get("SELECT * FROM users WHERE email = ?", [email]);
+  const foundUser = db
+    .prepare("SELECT * FROM users WHERE email = ?")
+    .get(email);
 
   if (!foundUser) {
     return res

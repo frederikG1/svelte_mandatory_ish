@@ -1,6 +1,6 @@
-import db from "./connection.js";
+import db from './connection.js';
 
-await db.exec(`
+db.exec(`
     CREATE TABLE IF NOT EXISTS users(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
