@@ -1,6 +1,6 @@
 <script>
   import { navigate } from "svelte-routing";
-  import { Toaster, toast } from "svelte-sonner";
+  import { toast } from "svelte-sonner";
 
   let name = $state("");
   let email = $state("");
@@ -39,7 +39,7 @@
   </div>
 </div>
 
-<Toaster />
+
 
 <style>
   .container {

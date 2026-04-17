@@ -4,6 +4,7 @@
   import Signup from "./pages/Signup.svelte";
   import Home from "./pages/Home.svelte";
   import { isLoggedIn } from "./stores/authStore.js";
+  import { Toaster } from "svelte-sonner";
 
   let loading = $state(true);
 
@@ -23,18 +24,16 @@
   checkSession();
 </script>
 
+<Toaster />
 {#if loading}
   <p>Loading...</p>
 {:else}
   <Router>
     <Route path="/login"><Login /></Route>
     <Route path="/signup"><Signup /></Route>
-    <Route path="/">
-      {#if $isLoggedIn}
-        <Home />
-      {:else}
-        <Login />
-      {/if}
+
+    <Route path="/" exact>
+      <Home />
     </Route>
   </Router>
 {/if}

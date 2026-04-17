@@ -5,38 +5,78 @@
     "password": "$2b$10$AtiY4.mvIyHPPfXrYjPzFuOtWVg3I5GeandE7q7CuQkoC0G2lmfgi"
   },
   {
-    "name": "Frederik",
-    "email": "fred@gmail.dk",
-    "password": "$2b$10$lf4O9soGGZPaUzHcq02YneczUI1GMFf70gTYwkxZPfU7veKgZD2Eu"
+    "name": "Bobby",
+    "email": "test@mail.dk",
+    "password": "$2b$10$548vuXS1tulAdmj/H2rwdOynsuazOmv2HucuwF0uiGJUVafbByMW6"
   },
   {
-    "name": "bob",
-    "email": "fred@gmail.com",
-    "password": "$2b$10$Z2MKX1riE.ncXlkbRw1BrOyQpX8RiVqL67aoNXaefmOgdH.v.RRfe"
+    "name": "Bobby",
+    "email": "test@mail.com",
+    "password": "$2b$10$HV7Kr0QFwqoDs4b2AOSzM.vpTkgJ/jwhmdSpCNNXiHWPf9NcwdUYm"
   },
   {
-    "name": "bob",
-    "email": "123@gmail.dk",
-    "password": "$2b$10$IAdH7l0Xqzj5hH2El0zkLu.R2KpS2fKYfaU9lzH52kKypXvE7qpGG"
+    "name": "henning",
+    "email": "henning@gmail.dk",
+    "password": "$2b$10$he6Ig3tDvfor.obDE4Id1u4V/b6UMB4BmM/b2UmMRnjON21Vu26vi"
   },
   {
-    "name": "frede",
-    "email": "hej",
-    "password": "$2b$10$fOrOUKQgw0dmz4oRqVNlAe5oCAdHSgitLgUX0Lnib/uXG/p7u5ah."
+    "name": "henning",
+    "email": "henning@gmail.com",
+    "password": "$2b$10$qs7BX43qBbPJm56g18qqhOyWdJ9Rv7F6erfEyKl3h4iDX.LyK7Fxi"
   },
   {
-    "name": "Frederik",
-    "email": "fred@gmail.com",
-    "password": "$2b$10$AvDGluojYR3XD7x7j4YnfuDUoWq8TXGWtAUzm.mtuerLAdFo1.yty"
+    "name": "henning",
+    "email": "henning@gmail.dkk",
+    "password": "$2b$10$YUdJAjl.A1lqgdPcr5DT/e7doZ4LRdx.EbEFze8bK4bewSPxdPGhC"
   },
   {
-    "name": "Frederik",
-    "email": "hej@gmail.com",
-    "password": "$2b$10$9xaqAIPhiehTHi/RYxY.X./UqL7MfSn3.J.NrrckSVLu0uw8yjII6"
+    "name": "henning",
+    "email": "henning@gmail.ek",
+    "password": "$2b$10$5rYzoIxQdQBIzHFGUqJJ7ed9qaKo7kB7VFiW0AV5oGksYeZDOkYSi"
   },
   {
-    "name": "hej",
-    "email": "123@mail.com",
-    "password": "$2b$10$nEsFmr0PoYAbjz9vzX9lQukcdOh93pOr4bEr139CYkkTHlxNm9Ce."
+    "name": "henning",
+    "email": "henning.ek",
+    "password": "$2b$10$p9BnNhuKd2iCEbmfmQGqaeh3SxuK2XZCw/iV/KhWertVEK7mE5lA2"
+  },
+  {
+    "name": "bobby",
+    "email": "bobby.dk",
+    "password": "$2b$10$qaiVUTih.2wIZ6sFuS.p1eSFDIBcgh4t9LhoxE6uQs3Z4uNFWoyFi"
+  },
+  {
+    "name": "bobby",
+    "email": "bobby.dkd",
+    "password": "$2b$10$EvNGB3dBbtXjzr1YTUxi1uX/rVHCBFzC8vTWTmpkS7vSLRc/d99a."
+  },
+  {
+    "name": "bobby",
+    "email": "vxlsshm5ivphsr5g@ethereal.email",
+    "password": "$2b$10$0Jzm2pdS5ev.b5VP7wfXY.tlOIN8Uzr/ulDpd8rwqzxiVs.k7Y6Y6"
+  },
+  {
+    "name": "bobby",
+    "email": "aogeidf7wk2oqsuh@ethereal.email",
+    "password": "$2b$10$KYFfA761ckxf0qo9mVgn6e9ew0ZwOAF2byBcj.SO1htWpIKG.Mkwe"
+  },
+  {
+    "name": "bobby",
+    "email": "123@hej.dk",
+    "password": "$2b$10$/dXUva2je9pt9AIMbzAgO.OfqM1OtGPmUhnqrwhDCPbAUgJz5Hfxa"
+  },
+  {
+    "name": "bobby",
+    "email": "123@hej.dkd",
+    "password": "$2b$10$qpDAsv.5e30bur3X5Z/.deDgIsh92u/akI4oqQtjon1M3I7cuOiFK"
+  },
+  {
+    "name": "heyyy",
+    "email": "heyyy@gmail.dk",
+    "password": "$2b$10$yYFdj0tJMQYxe8rlQk2EO.encaGoHDpvokt5bV4eC/RXWFU88IAZO"
+  },
+  {
+    "name": "heyyy",
+    "email": "heyyy@gmail.dke",
+    "password": "$2b$10$HprA.rNbGzgc5a1YD2adUOJkScJeaL/qhUtja0/J14gclHBUcJur6"
   }
 ]

@@ -2,23 +2,24 @@
   import { navigate } from "svelte-routing";
   import { Toaster, toast } from "svelte-sonner";
   import { isLoggedIn } from "../stores/authStore";
-  
 
   let email = $state("");
   let password = $state("");
-  
 
+  
   async function handleLogin() {
     try {
       const response = await fetch("http://localhost:8080/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ email, password }),
       });
       const data = await response.json();
 
       if (response.ok) {
         toast.success(data.successMessage);
+        navigate("/");
       } else {
         toast.error(data.errorMessage);
       }
@@ -38,7 +39,7 @@
   </div>
 </div>
 
-<Toaster />
+
 
 <style>
   .container {

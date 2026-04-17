@@ -1,6 +1,8 @@
 import { Router } from "express";
 import bcrypt from "bcrypt";
 import fs from "fs";
+import { sendMail } from "../utils/mailer.js";
+import db from "../database/createDatabase.js";
 
 const router = Router();
 const saltRounds = 10;
@@ -15,16 +17,31 @@ router.post("/signup", async (req, res) => {
     });
   }
 
-  const users = JSON.parse(fs.readFileSync("users/users.json", "utf-8"));
-  const existingUser = users.find((user) => user.email === email);
+  // const users = JSON.parse(fs.readFileSync("users/users.json", "utf-8"));
+  // const existingUser = users.find((user) => user.email === email);
+
+  const existingUser = await db.get("SELECT * FROM users WHERE email = ?", [email]);
+
   if (existingUser) {
-    return req.status(400).send({ errorMessage: "Email already in use" });
+    return res.status(400).send({ errorMessage: "Email already in use" });
   }
 
   const hashedPassword = await bcrypt.hash(password, saltRounds);
   const newUser = { name, email, password: hashedPassword };
-  users.push(newUser);
-  fs.writeFileSync("users/users.json", JSON.stringify(users, null, 2));
+  // users.push(newUser);
+  // fs.writeFileSync("users/users.json", JSON.stringify(users, null, 2));
+
+  await db.run("INSERT INTO users (name, email, password) VALUES (?, ?, ?)", [name, email, hashedPassword]);
+
+  // try {
+  //   await sendMail({
+  //     to: email,
+  //     subject: "Welcome",
+  //     text: "Thanks for signing up",
+  //   });
+  // } catch (err) {
+  //   console.log("Mail error", err.message);
+  // }
 
   res.status(200).send({ successMessage: "User created!" });
 });
@@ -38,8 +55,10 @@ router.post("/login", async (req, res) => {
     });
   }
 
-  const users = JSON.parse(fs.readFileSync("users/users.json", "utf-8"));
-  const foundUser = users.find((user) => user.email === email);
+  // const users = JSON.parse(fs.readFileSync("users/users.json", "utf-8"));
+  // const foundUser = users.find((user) => user.email === email);
+
+  const foundUser = await db.get("SELECT * FROM users WHERE email = ?", [email]);
 
   if (!foundUser) {
     return res
@@ -58,15 +77,21 @@ router.post("/login", async (req, res) => {
 });
 
 router.get("/me", async (req, res) => {
-  if (!res.session.user) {
-    return req.status(401).send({ errorMessage: "not logged in" });
+  if (!req.session.user) {
+    return res.status(401).send({ errorMessage: "not logged in" });
   }
   res.status(200).send({ user: req.session.user });
 });
 
 router.post("/logout", (req, res) => {
-  req.session.destroy();
-  res.status(200).send({ successMessage: "Logged out" });
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).send({ errorMessage: "Logout failed" });
+    }
+
+    res.clearCookie("connect.sid");
+    res.status(200).send({ successMessage: "Logged out" });
+  });
 });
 
 export function isLoggedIn(req, res, next) {
