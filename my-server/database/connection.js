@@ -1,5 +1,5 @@
-import Database from 'better-sqlite3';
+import { DatabaseSync } from 'node:sqlite';
 
-const db = new Database('users.db');
+const db = new DatabaseSync('users.db');
 
 export default db;

@@ -1,6 +1,12 @@
-import db from './connection.js';
+import db from "./connection.js";
 
-db.exec(`
+const deleteMode = process.argv.includes("--delete");
+
+if (deleteMode) {
+  await db.exec(`DROP TABLE IF EXISTS users`);
+}
+
+await db.exec(`
     CREATE TABLE IF NOT EXISTS users(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,

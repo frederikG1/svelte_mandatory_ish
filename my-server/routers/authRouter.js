@@ -39,15 +39,15 @@ router.post("/signup", async (req, res) => {
     hashedPassword,
   );
 
-  // try {
-  //   await sendMail({
-  //     to: email,
-  //     subject: "Welcome",
-  //     text: "Thanks for signing up",
-  //   });
-  // } catch (err) {
-  //   console.log("Mail error", err.message);
-  // }
+  try {
+    await sendMail({
+      to: email,
+      subject: "Welcome",
+      text: "Thanks for signing up",
+    });
+  } catch (err) {
+    console.log("Mail error", err.message);
+  }
 
   res.status(200).send({ successMessage: "User created!" });
 });
