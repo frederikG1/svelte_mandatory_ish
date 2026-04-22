@@ -23,6 +23,7 @@
       navigate("/login");
     }
   });
+  
   async function handleLogout() {
     try {
       const response = await fetch("http://localhost:8080/auth/logout", {
@@ -30,7 +31,6 @@
         credentials: "include",
       });
       console.log(response.status);
-      
 
       const data = await response.json();
 
@@ -49,8 +49,6 @@
   <h1>Welcome, {user?.name}! You are logged in.</h1>
   <button on:click={handleLogout}>Logout</button>
 </div>
-
-
 
 <style>
   .container {
